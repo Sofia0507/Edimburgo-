@@ -167,7 +167,7 @@ body {
 /* mwnu turismo */
 .menu-turismo {
   background-color: #4B8F6B; 
-  padding: 40px 20px;
+  padding: 40px 50px;
   text-align: center;
   color: white;
   bottom: -100px;
@@ -180,32 +180,38 @@ body {
   color: white;
 
   /* mueve el texto hacia abajo */
-  margin-top: 60px;   /* prueba aumentando este valor */
+  margin-top: 60px;   
 }
 
 .menu-turismo {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: -50px;
+  gap: -2px;
   justify-items: center;
   padding-top: 190px;
 }
+
+.menu-turismo :hover{
+  color: #F2C94C;
+}
+
 .menu-fila {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
 .menu-item {
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 
 
 
 .menu-turismo h2{
-    font-family: 'Pecita', cursive;
+  font-family: 'Pecita', cursive;
   font-size: 5rem;
   margin-bottom: 90px;
 
@@ -243,6 +249,7 @@ body {
 
 .icon-box:hover {
   transform: scale(1.05);
+  color: #F2C94C;
 }
 
 .icon-box i {
@@ -262,6 +269,13 @@ body {
 /* HISTORIA */
 
 
+.historia-seccion {
+  font-family: 'Pecita', cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin-top:100px;
+  color: #ffffff;
+}
 
 .historia-linea-tiempo {
   position: relative;
@@ -418,7 +432,7 @@ body {
   color:#FF2DA3;
   text-shadow:0 0 10px #FF2DA3 ;
   margin-bottom: 50px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Sounce sans pro', sans-serif;
 }
 
 #como-llegar {
@@ -458,7 +472,7 @@ body {
 }
 
 .transporte-toggle:hover {
-  background-color: #A5F557;
+  background-color: #F2C94C;
   color: #000;
 }
 
@@ -473,4 +487,14 @@ body {
 .transporte-item.active .transporte-info {
   max-height: 200px;
   padding: 1rem;
+}
+
+
+/* TRASPORTE */
+.trasporte h2{
+  font-family: 'Pecita', cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin-top:60px;
+  color: #ffffff;
 }
