@@ -68,23 +68,6 @@ body {
   z-index: 1;
 }
 
-.menu-turismo {
-  background-color: #4B8F6B;
-  padding: 120px 40px;
-  margin-top: -90px;
-  position: relative;
-  z-index: 3;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-
-  /* Difuminado en la parte superior */
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%);
-  mask-repeat: no-repeat;
-  mask-size: cover;
-}
 
 #main-header {
   position: absolute; 
@@ -166,34 +149,57 @@ body {
 
 /* mwnu turismo */
 .menu-turismo {
-  background-color: #4B8F6B; 
-  padding: 40px 50px;
-  text-align: center;
+  background-color: #4B8F6B;
+  padding: 80px 50px;
   color: white;
-  bottom: -100px;
+}
+
+.menu-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .menu-titulo {
-  text-align: center;
-  font-family: 'Pecita', sans-serif; 
+  font-family: 'Pecita', sans-serif;
   font-size: 64px;
-  color: white;
+  margin-top: 20px;
+  text-align: left;
+} 
 
-  /* mueve el texto hacia abajo */
-  margin-top: 60px;   
-}
-
-.menu-turismo {
+.menu-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: -2px;
+  gap: 30px;
   justify-items: center;
-  padding-top: 190px;
 }
 
-.menu-turismo :hover{
-  color: #F2C94C;
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
+
+.icon-box {
+  width: 130px;
+  height: 130px;
+  background-color: white;
+  color: #4f6a52;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
 
 .menu-fila {
   display: flex;
@@ -223,30 +229,6 @@ body {
   color: #4f6a52;
 }
 
-
-
-.menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.icon-box {
-  width: 130px;
-  height: 130px;
-  background-color: white;
-  color: #4f6a52;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
 .icon-box:hover {
   transform: scale(1.05);
   color: #F2C94C;
@@ -260,34 +242,33 @@ body {
   font-weight: bold;
   margin: 0;
 }
-/* .icon-box i {
-  color: #4f6a52;
-  font-size: 40px;
-} */
 
 
 /* HISTORIA */
 
+#historia-seccion {
+  margin-top:300px; 
+}
 
 .historia-seccion {
   font-family: 'Pecita', cursive;
   font-size: 3rem;
   text-align: center;
-  margin-top:100px;
+  color: #ffffff;
+  margin-top: 500px; 
+}
+
+section {
+  margin-bottom: 150px; /* espacio uniforme entre secciones */
+}
+
+#historia-seccion h2{
+  font-family: 'Pecita', cursive;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 60px;
   color: #ffffff;
 }
-
-.historia-linea-tiempo {
-  position: relative;
-  max-width: 1200px;
-  margin : 80px;
-  padding: 40px 0;
-
-}
-.historia-seccion {
-  margin-top: 100px; 
-}
-
 
 .historia-titulo {
   font-family: 'Pecita', cursive;
@@ -297,6 +278,14 @@ body {
   color: #4B8F6B;
 }
  
+
+.historia-linea-tiempo {
+  position: relative;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 40px 0;
+}
+
 /* LINEA DEL MEDIO */
 .historia-linea-tiempo::before {
   content: '';
@@ -304,7 +293,7 @@ body {
   top: 0;               
   bottom: 0;           
   left: 50%;            
-  width: 4px;
+  width: 2px;
   background-color: #ffffff;
   transform: translateX(-50%);
   z-index: 0;
@@ -312,39 +301,49 @@ body {
 
 /* bloques */
 .historia-item {
-  position: relative;
-  width: 50%;
-  padding: 20px 40px;
-  box-sizing: border-box;
-  margin-bottom: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 400px;
 }
 
 /* lado izq */
 .historia-item.izquierda {
   left: 0;
-  text-align: right;
 }
 
 /* lado derecha */
 
 .historia-item.derecha {
-  left: 50%;
-  text-align: left;
+  flex-direction: row-reverse;
 }
 
 /* contenido */
 .historia-contenido {
-  background-color: white;
-  color: #4B8F6B;
+  background-color:#4B8F6B;
+  color: #ffffff;
   padding: 20px;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  
+  max-width: 400px;
+  margin: 150px auto;
+  margin-left: 40px;
+  
+}
+
+
+
+.historia-contenido p {
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1rem;
+  margin: 0;
 }
 
 /* imágenes */
 .historia-item img {
   width: 100%;
-  max-width: 700px;
+  max-width: 500px;
   border-radius: 12px;
   margin-bottom: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -353,25 +352,17 @@ body {
 /* animaciones */
 .oculto {
   opacity: 0;
-  transform: translateY(60px) scale(0.95);
-  filter: blur(6px);
-  transition: opacity 1.5s ease, transform 1.5s ease, filter 1.5s ease;
+  transform: translateY(40px); 
+  filter: blur(9px);           
+  transition: opacity 1.2s ease-out, 
+              transform 1.2s ease-out, 
+              filter 1.2s ease-out;
 }
-
 
 .visible {
- opacity: 1;
-  transform: translateY(0) scale(1);
+  opacity: 1;
+  transform: translateY(0);
   filter: blur(0);
-}
-
-.historia-item.derecha {
-  left: 50%;   /* coloca el bloque en el lado derecho de la línea central */
-  text-align: left;
-}
-.historia-item.izquierda {
-  left: 0;     /* coloca el bloque en el lado izquierdo */
-  text-align: right;
 }
 
 
@@ -491,10 +482,43 @@ body {
 
 
 /* TRASPORTE */
-.trasporte h2{
+#trasporte h2{
   font-family: 'Pecita', cursive;
   font-size: 3rem;
   text-align: center;
   margin-top:60px;
   color: #ffffff;
+}
+.info-transporte {
+  background-color: #4B8F6B;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+
+.info-transporte.visible {
+  opacity: 1;
+  max-height: 300px; 
+}
+
+.foto-transporte {
+  width: 100%;
+  max-width: 500px;  
+  height: 400px;      
+  object-fit: cover;  
+  border-radius: 12px;
+  margin: 0 auto;     
+  cursor: pointer;   
+} 
+
+.transporte-item {
+  background-color: transparent;
+  border-style: none;
+  align-items: center; 
+   margin: 200px;
 }

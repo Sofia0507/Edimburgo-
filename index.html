@@ -40,68 +40,19 @@
          <img src="img/wave.svg" alt="">
         </div> -->
 
-       <section class="menu-turismo">
-          <h2 class="menu-titulo">Menú</h2>
-          <div class="menu-fila">
-              <div class="menu-item">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-landmark"></i>
-                        <p>Historia</p>
-                    </div>
-                </div>
-                
-                <div class="menu-item">
-                    <div class="icon-box">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p>Localicación</p>
-                    </div>
-                </div>
+        <section class="menu-turismo">
+          <div class="menu-layout">
+                <h2 class="menu-titulo">Menú</h2>
 
-                <div class="menu-item">
-                    <div class="icon-box">
-                     <i class="fa-solid fa-train-subway"></i>                        
-                     <p>Trasporte</p>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="icon-box">
-                     <i class="fa-solid fa-bed"></i>
-                     <p>Donde alojarse</p>
-                    </div>
-                </div>
-          </div>
-
-            <div class="menu-fila">
-                <div class="menu-item">
-                    <div class="icon-box">
-                     <i class="fa-solid fa-eye"></i>
-                     <p>Curiosidades</p>
-                    </div>
-                </div>
-
-                
-                <div class="menu-item">
-                    <div class="icon-box">
-                     <i class="fa-solid fa-apple-whole"></i>
-                     <p>Que ver y hacer</p>
-                    </div>
-                </div>
-
-               
-                <div class="menu-item">
-                    <div class="icon-box">
-                     <i class="fa-solid fa-children"></i>
-                     <p>Turistas por mes</p>
-                    </div>
-                </div>
-
-                
-                <div class="menu-item">
-                    <div class="icon-box">
-                     <i class="fa-solid fa-apple-whole"></i>
-                     <p>Gastronomía</p>
-                    </div>
+                <div class="menu-grid">
+                    <div class="menu-item"><div class="icon-box"><i class="fa-solid fa-landmark"></i><p>Historia</p></div></div>
+                    <div class="menu-item"><div class="icon-box"><i class="fa-solid fa-location-dot"></i><p>Localización</p></div></div>
+                    <div class="menu-item"><div class="icon-box"><i class="fa-solid fa-train-subway"></i><p>Transporte</p></div></div>
+                    <div class="menu-item"><div class="icon-box"><i class="fa-solid fa-bed"></i><p>Donde alojarse</p></div></div>
+                    <div class="menu-item"><div class="icon-box"><i class="fa-solid fa-eye"></i><p>Curiosidades</p></div></div>
+                    <div class="menu-item"><div class="icon-box"><i class="fa-solid fa-apple-whole"></i><p>Qué ver y hacer</p></div></div>
+                    <div class="menu-item"><div class="icon-box"><i class="fa-solid fa-children"></i><p>Turistas por mes</p></div></div>
+                    <div class="menu-item"><div class="icon-box"><i class="fa-solid fa-apple-whole"></i><p>Gastronomía</p></div></div>
                 </div>
           </div>
         </section>
@@ -169,10 +120,11 @@
                 <div class="historia-item izquierda oculto">
                     <img src="img/historia7.jpg" alt="Revolución Industrial"/>
                     <div class="historia-contenido">   
-                    <h3>Revolución Industrial(siglos XVIII – XIX)</h3>
-                    <p>Crecen barrios, fábricas y la vida comercial; llegan ferrocarriles
-                        y puentes. La ciudad se moderniza y se densifica.
-                    </p>
+                        <h3>Revolución Industrial(siglos XVIII – XIX)</h3>
+                        <p>Crecen barrios, fábricas y la vida comercial; llegan ferrocarriles
+                            y puentes. La ciudad se moderniza y se densifica.
+                        </p>
+                    </div>    
                 </div>
 
                 <div class="historia-item derecha oculto">
@@ -220,8 +172,35 @@
 
         <!-- TRASPORTE -->
 
-        <section class="trasporte">
+        <section class="trasporte-seccion">
             <h2>Trasporte</h2>
+
+            <div class="transporte-2">
+                <img src="img/tranvia.jpg" alt="Tranvía" class="foto-transporte" onclick="toggleInfo('tranvia')"/>
+                <div id="info-tranvia" class="info-transporte oculto">
+                  <h3>Tranvía</h3>
+                  <p>Rápido, silencioso y moderno. Ideal para moverse por el centro histórico.</p>
+                </div>
+            </div>
+
+            <div class="transporte-item">
+                <img src="img/bus.jpg" alt="Autobús" class="foto-transporte" onclick="toggleInfo('bus')"/>
+                <div id="info-bus" class="info-transporte oculto">
+                  <h3>Autobús</h3>
+                  <p>Amplia red que conecta todos los barrios. Funciona desde temprano hasta medianoche.</p>
+                </div>
+            </div>
+
+            <div class="transporte-item">
+                <img src="img/taxi.jpg" alt="Taxi" class="foto-transporte" onclick="toggleInfo('taxi')"/>
+                <div id="info-taxi" class="info-transporte oculto">
+                 <h3>Taxi</h3>
+                 <p>Disponible 24/7. Puedes pedirlo por app o encontrarlo en paradas señalizadas.</p>
+                </div>
+            </div>
+
+
+
         </section>
 
 

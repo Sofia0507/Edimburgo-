@@ -1,17 +1,23 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const items = document.querySelectorAll(".historia-item");
+const items = document.querySelectorAll('.oculto');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        entry.target.classList.remove("oculto");
-      }
-    });
-  }, { threshold: 0.2 }); // 20% visible para activar
-
-  items.forEach(item => {
-    item.classList.add("oculto"); // aseguramos que empiecen ocultos
-    observer.observe(item);
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');   // aparece
+      entry.target.classList.remove('oculto'); // deja de estar oculto
+    }
   });
+}, {
+  threshold: 0.2 // porcentaje de visibilidad para activar (20%)
 });
+
+// Observamos cada item
+items.forEach(item => {
+  observer.observe(item);
+});
+
+
+function toggleInfo(id) {
+  const info = document.getElementById('info-' + id);
+  info.classList.toggle('visible');
+}
