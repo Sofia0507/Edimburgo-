@@ -648,7 +648,7 @@ section {
 }
 
 .nav.prev{ left: -200px; }
-.nav.next{ right: 400px; }
+.nav.next{ right: 460px; }
 
 .nav:hover{
   background: rgba(255,255,255,0.7);
