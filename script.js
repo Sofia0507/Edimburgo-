@@ -48,3 +48,30 @@ document.querySelector(".prev").onclick = () => {
 };
 
 
+
+const card = document.querySelectorAll('.carousel .card');
+const infoCards = document.querySelectorAll('.info-card');
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    // Quita active de todas las info
+    infoCards.forEach(info => info.classList.remove('active'));
+    // Detecta el título de la card clicada
+    const title = card.querySelector('h1').textContent;
+
+    // Busca el bloque correspondiente
+    if (title.includes("Hadas")) {
+      document.getElementById("info-hadas").classList.add("active");
+    } else if (title.includes("Hume")) {
+      document.getElementById("info-hume").classList.add("active");
+    } else if (title.includes("Harry Potter")) {
+      document.getElementById("info-hp").classList.add("active");
+    } else if (title.includes("cementerios")) {
+      document.getElementById("info-cementerio").classList.add("active");
+    } else if (title.includes("Bobby")) {
+      document.getElementById("info-bobby").classList.add("active");
+    }
+  });
+});
+
+

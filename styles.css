@@ -680,3 +680,119 @@ section {
   background: rgba(0,0,0,0.5); 
   z-index: -1; /* queda entre el fondo y las tarjetas */
 }
+
+
+.info-panel {
+  position: relative;
+  min-height: 150px;
+  margin-top: 20px;
+}
+
+.info-card {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+}
+
+.info-card.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+
+.destinos {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.destino-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.destino-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.destino-card {
+  min-width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.destino-card img {
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.destino-card .info {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  text-align: left;
+}
+
+.destino-card .info h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.destino-card .info p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.drag-label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  transform: rotate(-20deg);
+}
+
+.nav-arrows {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+
+.nav-arrows button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.3);
+}
+
+.progress-fill {
+  width: 33.33%;
+  height: 100%;
+  background: #fff;
+  transition: width 0.5s ease;
+}
