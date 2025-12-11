@@ -522,3 +522,132 @@ section {
   align-items: center; 
    margin: 200px;
 }
+
+
+/* PAGINA2 */
+
+.carrousel h2{
+  font-family: 'Pecita', cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin-top:60px;
+  color: #ffffff;
+}
+
+
+.carousel{
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-40%, -50%);
+
+  width: 900px; 
+  height: 480px;
+}
+
+.carousel-track{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transform-style: preserve-3d;
+}
+
+.card{
+  position: absolute;
+  width: 260px;
+  height: 380px;
+  transform:
+    translateX(calc(var(--i) * 180px))
+    rotateY(calc(var(--i) * -25deg))
+    scale(calc(1 - (abs(var(--i)) * 0.1)));
+  transition: 0.8s ease;
+  opacity: calc(1 - (abs(var(--i)) * 0.3));
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 20px 35px rgba(0,0,0,0.4);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+
+
+.card:hover{
+  transform: 
+    translateX(calc(var(--i) * 180px))
+    rotateY(calc(var(--i) * -25deg))
+    scale(calc(1 - (abs(var(--i)) * 0.15)))
+    rotateZ(2deg)      
+    translateY(-10px);
+}
+
+
+
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card.active{
+  transform: translateX(0) rotateY(0) scale(1);
+  opacity: 1;
+}
+
+.card:hover img{
+  transform: scale(1.05) translateX(8px); 
+}
+
+.overlay{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+}
+
+.overlay h1{
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+
+.overlay p{
+  opacity: 0.8;
+  margin: 0;
+}
+
+
+.nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  color: white;
+
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(4px);
+
+  transition: .2s ease;
+  z-index: 10;
+}
+
+.nav.prev{ left: -200px; }
+.nav.next{ right: 400px; }
+
+.nav:hover{
+  background: rgba(255,255,255,0.7);
+}
+
+
