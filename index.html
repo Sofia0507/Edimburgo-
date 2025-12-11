@@ -6,8 +6,9 @@
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <title>Edimburgo City</title>
-
        <link rel="stylesheet" href="styles.css" />
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.min.js"></script>
+       
     </head>
 
 
@@ -40,7 +41,7 @@
          <img src="img/wave.svg" alt="">
         </div> -->
 
-        <section class="menu-turismo">
+        <!-- <section class="menu-turismo">
           <div class="menu-layout">
                 <h2 class="menu-titulo">Menú</h2>
 
@@ -55,160 +56,217 @@
                     <div class="menu-item"><div class="icon-box"><i class="fa-solid fa-apple-whole"></i><p>Gastronomía</p></div></div>
                 </div>
           </div>
+        </section> -->
+        <section class="bienvenida animado">
+           <section class="bloque-bienvenida">
+            <div class="contenedor">
+                <div class="texto">
+                <h1>Bienvenido</h1>
+                <h2>Aquí no solo visitas una ciudad. Te sumerges en sus leyendas. Te transformas.</h2>
+                <p>
+                   Cada rincón de Edimburgo está pensado para que vivas experiencias auténticas, llenas de historia, misterio y belleza natural. Queremos que cada paso que des entre sus calles empedradas, sus colinas y sus castillos deje una 
+                   huella positiva en ti, en quienes te cruzas, y en la memoria viva de esta ciudad que respira magia y resistencia.
+                </p>
+                
+                </div>
+                <div class="imagen"></div>
+            </div>
+        </section>
+       </section>
+        
+
+
+        <section class="estadisticas-viaje">
+            <div class="stat">
+                <h2>95%</h2>
+                <p>Viajeros satisfechos con su experiencia en Edimburgo</p>
+            </div>
+            <div class="stat">
+                <h2>500+</h2>
+                <p>Recorridos guiados al año por la ciudad y sus leyendas</p>
+            </div>
+            <div class="stat">
+                <h2>150+</h2>
+                <p>Lugares mágicos, históricos y culturales incluidos en nuestros itinerarios</p>
+            </div>
+            <div class="stat">
+                <h2>2,000+</h2>
+                <p>Reseñas positivas que nos inspiran a seguir conectando viajeros con la esencia de Escocia</p>
+            </div>
         </section>
 
-        <!-- Historia -->
-       <section id="historia-seccion">
-         <h2 >Historia</h2>
-          <div class="historia-linea-tiempo">
+    
+        <section class="localizacion">
+            <div class="contenido">
+                <!-- Mapa a la izquierda -->
+                <iframe 
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71502.94469946621!2d-3.287738406213326!3d55.9412769990536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887b800a5982623%3A0x64f2147b7ce71727!2sEdimburgo%2C%20Reino%20Unido!5e0!3m2!1ses!2ses!4v1765490828920!5m2!1ses!2ses" 
+                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              
+
             
-                <div class="historia-item izquierda oculto">
-                    <img src="img/historia1.jpg" alt="Era Celta" style="width:250px; height:auto;"/>
-                    <div class="historia-contenido">
-                        <h3>Era Celta</h3>
-                        <p>Los primeros clanes habitan las tierras altas y dejan estructuras como broches y círculos de piedra.</p>
-                    </div> 
-                </div>
-
-                <div class="historia-item derecha oculto">
-                    <img src="img/historia2.jpg" alt="Dominio Romano"/>
-                    <div class="historia-contenido">
-                        <h3>Dominio Romano</h3>
-                        <p>Los romanos no conquistan la zona, pero establecen fuertes cerca y documentan a los pictos. Edimburgo queda fuera del Imperio romano, pero su presencia influye en rutas y asentamientos.</p>
-                    </div>
-                </div>
-
-                <div class="historia-item izquierda oculto">
-                    <img src="img/historia3.jpg" alt="Reino de Northumbria"/>
-                    <div class="historia-contenido">
-                        <h3>Reino de Northumbria</h3>
-                        <p>El poblado se conoce como Din Eidyn, fortaleza en la colina, tomada luego por anglos. Este es el origen del nombre Edimburgo.</p>
-                    </div>
-                </div> 
-
-                <div class="historia-item derecha oculto">
-                    <img src="img/historia4.jpg" alt="Edimburgo Medieval"/>
-                    <div class="historia-contenido">
-                        <h3>Edimburgo Medieval</h3>
-                        <p>Nace la ciudad real: se construye la fortaleza definitiva y 
-                            se crea la Royal Mile.” El castillo se vuelve residencia
-                            real y el núcleo urbano crece en una pendiente estrecha.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="historia-item izquierda oculto">
-                    <img src="img/historia5.jpg" alt="Reforma Escocesa"/>
-                    <div class="historia-contenido">
-                        <h3>Reforma Escocesa</h3>
-                        <p>La ciudad se convierte en centro político y religioso de Escocia.
-                            Cambios religiosos, tensiones y crecimiento urbano.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="historia-item derecha oculto">
-                    <img src="img/historia6.webp" alt="Ilustración Escocesa"/>
-                    <div class="historia-contenido">
-                        <h3>Ilustración Escocesa</h3>
-                        <p>Edimburgo destaca por su cultura, filosofía y ciencia; nace la New Town.
-                        La ciudad se expande hacia el norte con avenidas geométricas y arquitectura elegante.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="historia-item izquierda oculto">
-                    <img src="img/historia7.jpg" alt="Revolución Industrial"/>
-                    <div class="historia-contenido">   
-                        <h3>Revolución Industrial(siglos XVIII – XIX)</h3>
-                        <p>Crecen barrios, fábricas y la vida comercial; llegan ferrocarriles
-                            y puentes. La ciudad se moderniza y se densifica.
-                        </p>
-                    </div>    
-                </div>
-
-                <div class="historia-item derecha oculto">
-                    <img src="img/historia8.jpg" alt="Siglo XX – Actualidad"/>
-                    <div class="historia-contenido">
-                    <h3>Siglo XX – Actualidad</h3>
-                    <p>Edimburgo se consolida como capital cultural: festivales, museos y patrimonio.
-                        Especialmente famoso es el Edinburgh Festival y el Fringe, los más grandes del mundo.
+    
+                <div class="texto">
+                    <h1>Localización</h1>
+                    <p>
+                        Edimburgo se encuentra en la costa este de Escocia, rodeada de colinas y bañada por el Mar del Norte.
+                        Su ubicación estratégica ha marcado su historia y hoy la convierte en un destino accesible y lleno de encanto.
                     </p>
                 </div>
-            </div>
+          </div>
         </section>
-
-        <section id="dondenosencontramos">
-           <h2>Localización</h2>
-
-           <div class="ubicacion-container">
-            <!-- MAPA -->
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/d/embed?mid=16ceWCoh64WNWs8sq1v-7cqsMtAHUks8&ehbc=2E312F" width="640" height="480"></iframe>
-            </div>
-           
-            </div>
-                <!-- INFO DE COMO LLEGAR -->
-                <div class="info-container">
-                    <div class="transporte-acordeon">
-                        <div class="transporte-item">
-                            <button class="transporte-toggle">¿Como llegar?</button>
-                            <div class="transporte-info">
-                                <p>Línea ALSA desde Oviedo. Duración aproximada: <strong>45 minutos</strong>. Parada: <em>Castañera – La Morgal</em>.</p>
-                            </div>
-                            </div>
-
-                            <div class="transporte-item">
-                            <button class="transporte-toggle">Zonas destacadas</button>
-                            <div class="transporte-info">
-                                <p>Estación <strong>Lugo de Llanera</strong>. Trayecto: <strong>12 minutos</strong> + <strong>23 minutos a pie</strong> hasta el recinto.</p>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- TRASPORTE -->
 
-        <section class="trasporte-seccion">
-            <h2>Trasporte</h2>
-
-            <div class="transporte-2">
-                <img src="img/tranvia.jpg" alt="Tranvía" class="foto-transporte" onclick="toggleInfo('tranvia')"/>
-                <div id="info-tranvia" class="info-transporte oculto">
-                  <h3>Tranvía</h3>
-                  <p>Rápido, silencioso y moderno. Ideal para moverse por el centro histórico.</p>
-                </div>
+        <section class="transporte" id="transporte">
+            <div class="transporte-header">
+                <h2>Cómo moverte por Edimburgo</h2>
+                <p>Opciones rápidas, accesibles y cómodas para recorrer la ciudad.</p>
             </div>
 
-            <div class="transporte-2">
-                <img src="img/bus.jpg" alt="Autobús" class="foto-transporte" onclick="toggleInfo('bus')"/>
-                <div id="info-bus" class="info-transporte oculto">
-                  <h3>Autobús</h3>
-                  <p>Amplia red que conecta todos los barrios. Funciona desde temprano hasta medianoche.</p>
-                </div>
+            <div class="transporte-grid">
+                <!-- Tranvía -->
+                <article class="card-transporte">
+                    <div class="card-top">
+                        <i class="fa-solid fa-train-subway" aria-hidden="true"></i>
+                        <h3>Tranvía</h3>
+                    </div>
+                    <p class="card-desc">Conecta el aeropuerto, zonas clave y el centro histórico con buena frecuencia.</p>
+                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-tranvia" onclick="toggleDetalles('det-tranvia', this)">Ver detalles</button>
+                    <div id="det-tranvia" class="detalles" hidden>
+                        <ul>
+                        <li><strong>Horarios:</strong> Desde temprano hasta medianoche.</li>
+                        <li><strong>Tickets:</strong> Máquinas en estaciones; contactless admitido.</li>
+                        <li><strong>Accesibilidad:</strong> Suelo bajo, espacio para sillas y carritos.</li>
+                        </ul>
+                    </div>
+                </article>
+
+
+                <article class="card-transporte">
+                    <div class="card-top">
+                        <i class="fa-solid fa-bus" aria-hidden="true"></i>
+                        <h3>Autobús</h3>
+                    </div>
+                    <p class="card-desc">Red amplia que cubre barrios y atracciones principales.</p>
+                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-bus" onclick="toggleDetalles('det-bus', this)">Ver detalles</button>
+                    <div id="det-bus" class="detalles" hidden>
+                        <ul>
+                        <li><strong>Horarios:</strong> Alta frecuencia en hora punta; nocturnos disponibles.</li>
+                        <li><strong>Pago:</strong> Contactless y apps; pases diarios útiles.</li>
+                        <li><strong>Accesibilidad:</strong> Rampa y espacio reservado.</li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <article class="card-transporte">
+                    <div class="card-top">
+                        <i class="fa-solid fa-taxi" aria-hidden="true"></i>
+                        <h3>Taxi</h3>
+                    </div>
+                    <p class="card-desc">Disponibles 24/7; prácticos para trayectos cortos o nocturnos.</p>
+                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-taxi" onclick="toggleDetalles('det-taxi', this)">Ver detalles</button>
+                    <div id="det-taxi" class="detalles" hidden>
+                        <ul>
+                        <li><strong>Cómo pedir:</strong> App, parada señalizada o teléfono.</li>
+                        <li><strong>Pago:</strong> Efectivo y tarjeta; tarifas reguladas.</li>
+                        <li><strong>Accesibilidad:</strong> Vehículos adaptados disponibles.</li>
+                        </ul>
+                    </div>
+                </article>
+
+
+                <article class="card-transporte">
+                    <div class="card-top">
+                        <i class="fa-solid fa-person-biking" aria-hidden="true"></i>
+                        <h3>Bicicleta</h3>
+                    </div>
+                    <p class="card-desc">Rutas escénicas y carriles en expansión; ideal para explorar parques.</p>
+                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-bici" onclick="toggleDetalles('det-bici', this)">Ver detalles</button>
+                    <div id="det-bici" class="detalles" hidden>
+                        <ul>
+                        <li><strong>Alquiler:</strong> Tiendas locales y sistemas de share.</li>
+                        <li><strong>Seguridad:</strong> Casco, luces, candado en zonas concurridas.</li>
+                        <li><strong>Rutas:</strong> Arthur’s Seat, Water of Leith, Meadows.</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
 
-            <div class="transporte-2">
-                <img src="img/taxi.jpg" alt="Taxi" class="foto-transporte" onclick="toggleInfo('taxi')"/>
-                <div id="info-taxi" class="info-transporte oculto">
-                 <h3>Taxi</h3>
-                 <p>Disponible 24/7. Puedes pedirlo por app o encontrarlo en paradas señalizadas.</p>
-                </div>
-            </div>
+           <canvas id="myChart" width="400" height="400"></canvas>
 
 
 
+
+
+        
+        <section class="contacto">
+          <div class="contacto-contenedor">
+            
+                <!-- Formulario -->
+                <div class="formulario">
+                <h2>Contáctanos</h2>
+                <form>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+34 600 000 000" required>
+
+                    <label for="comentario">Comentario</label>
+                    <textarea id="comentario" name="comentario" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+
+                    <div class="consentimiento">
+                    <input type="checkbox" id="consentimiento" required>
+                    <label for="consentimiento">Doy mi consentimiento para el tratamiento de mis datos personales</label>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+
+                
+
+                
+           </div>
         </section>
         
-
-        
             
-        </section>    
+        <footer class="footer">
+            <div class="footer-contenedor">
+        
+                <!-- Bloque 1: Información -->
+                <div class="footer-info">
+                    <h3>Edimburgo City</h3>
+                    <p>Descubre la magia de Escocia a través de su capital llena de historia, cultura y leyendas.</p>
+                </div>
 
-      <script src="script.js"></script>
+                <!-- Bloque 2: Enlaces -->
+                <div class="footer-links">
+                    <h4>Enlaces útiles</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="descubre.html">Descubre</a></li>
+                        <li><a href="#localizacion">Localización</a></li>
+                        <li><a href="#transporte">Transporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Conecta</h4>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-copy">
+                <p>&copy; 2025 Edimburgo City. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+                    
+
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="js/script.js"></script>
     </body>  
 
 </html>

@@ -8,8 +8,9 @@
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <title>Edimburgo City</title>
-
        <link rel="stylesheet" href="styles.css" />
+       <script src="js/script.js"></script>
+
     </head>
 
    
@@ -75,31 +76,16 @@
 
                 <button class="nav prev"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="nav next"><i class="fa-solid fa-chevron-right"></i></button>
-             </div>
+            </div>
+
+            <div class="curiosidad-detalle">
+                <h3 id="detalle-titulo">El Bosque de las Hadas</h3>
+                <p id="detalle-descripcion">Un rincón mágico donde las leyendas aún viven entre los árboles y la niebla.</p>
+            </div>
+
         </section>
 
-        <section class="info-panel">
-            <div class="info-card active" id="info-hadas">
-                <h2>El Bosque de las Hadas</h2>
-                <p>Un rincón mágico donde las leyendas aún viven entre árboles centenarios y susurros del viento.</p>
-            </div>
-            <div class="info-card" id="info-hume">
-                <h2>El dedo de David Hume</h2>
-                <p>Dicen que trae suerte si lo tocas antes de un examen...</p>
-            </div>
-            <div class="info-card" id="info-hp">
-                <h2>La magia de Harry Potter</h2>
-                <p>Entre calles y cafés nació un mundo de hechizos...</p>
-            </div>
-            <div class="info-card" id="info-cementerio">
-                <h2>Picnics en los cementerios</h2>
-                <p>Un lugar de descanso que también guarda momentos cotidianos...</p>
-            </div>
-            <div class="info-card" id="info-bobby">
-                <h2>Greyfriars Bobby</h2>
-                <p>Un amigo que nunca abandonó a su dueño...</p>
-            </div>
-        </section>
+        
 
         <section class="destinos">
             <div class="destino-carousel">
@@ -136,7 +122,153 @@
                 <div class="progress-fill"></div>
                 </div>
             </div>
-        </section>             
+        </section>  
+         
+        <section class="alojamiento" id="alojamiento">
+            <h2>Dónde alojarse en Edimburgo</h2>
+
+            <div class="filtros">
+                <button class="filtro activo" data-categoria="todos">Todos</button>
+                <button class="filtro" data-categoria="histórico">Zona histórica</button>
+                <button class="filtro" data-categoria="moderno">Zona moderna</button>
+                <button class="filtro" data-categoria="alternativo">Alternativo</button>
+            </div><div class="grid-alojamiento">
+            <!-- Old Town -->
+            <div class="card-alojamiento" data-categoria="histórico">
+                <img src="img/DedoHume.jpg" alt="Old Town">
+                <div class="info">
+                    <h3>Old Town</h3>
+                    <p class="rating">⭐ 4.8</p>
+                    <p>Calles adoquinadas, historia viva y alojamientos con encanto medieval.</p>
+                </div>
+            </div>
+
+             <!-- New Town -->
+            <div class="card-alojamiento" data-categoria="moderno">
+                <img src="img/taxi.jpg" alt="New Town">
+                <div class="info">
+                    <h3>New Town</h3>
+                    <p class="rating">⭐ 4.6</p>
+                    <p>Arquitectura georgiana, tiendas elegantes y hoteles modernos.</p>
+                </div>
+            </div>
+
+            <!-- Leith -->
+            <div class="card-alojamiento" data-categoria="alternativo">
+                <img src="img/tranvia.jpg" alt="Leith">
+                <div class="info">
+                    <h3>Leith</h3>
+                    <p class="rating">⭐ 4.5</p>
+                    <p>Zona portuaria con ambiente artístico, bares y alojamientos asequibles.</p>
+                </div>
+            </div>
+
+             <!-- Dean Village -->
+            <div class="card-alojamiento" data-categoria="histórico">
+                <img src="img/bus.jpg" alt="Dean Village">
+                <div class="info">
+                    <h3>Dean Village</h3>
+                    <p class="rating">⭐ 4.7</p>
+                    <p>Rincón tranquilo junto al río, ideal para desconectar cerca del centro.</p>
+                </div>
+
+            </div><!-- Stockbridge -->
+            <div class="card-alojamiento" data-categoria="moderno">
+                <img src="img/bosquehadas.jpg" alt="Stockbridge">
+                <div class="info">
+                    <h3>Stockbridge</h3>
+                    <p class="rating">⭐ 4.6</p>
+                    <p>Ambiente bohemio, cafés locales y alojamientos boutique.</p>
+                </div>
+            </div>
+
+            <!-- Southside -->
+            <div class="card-alojamiento" data-categoria="alternativo">
+                <img src="img/cementerio.jpg" alt="Southside">
+                <div class="info">
+                    <h3>Southside</h3>
+                    <p class="rating">⭐ 4.4</p>
+                    <p>Zona universitaria con hostales, cultura y vida nocturna.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="quever" id="quever">
+            <h2>Qué ver y hacer en Edimburgo</h2>
+
+            <div class="grid-destinos">
+                <div class="destino">
+                <img src="img/castillo.jpg" alt="Castillo de Edimburgo">
+                <h3>Castillo de Edimburgo</h3>
+                </div>
+                <div class="destino">
+                <img src="img/arthursseat.jpg" alt="Arthur’s Seat">
+                <h3>Arthur’s Seat</h3>
+                </div>
+                <div class="destino">
+                <img src="img/royalmile.jpg" alt="Royal Mile">
+                <h3>Royal Mile</h3>
+                </div>
+                <div class="destino">
+                <img src="img/deanvillage.jpg" alt="Dean Village">
+                <h3>Dean Village</h3>
+                </div>
+                <div class="destino">
+                <img src="img/museo.jpg" alt="Museo Nacional">
+                <h3>Museo Nacional</h3>
+                </div>
+            </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <footer class="footer">
+            <div class="footer-contenedor">
+        
+                <!-- Bloque 1: Información -->
+                <div class="footer-info">
+                    <h3>Edimburgo City</h3>
+                    <p>Descubre la magia de Escocia a través de su capital llena de historia, cultura y leyendas.</p>
+                </div>
+
+                <!-- Bloque 2: Enlaces -->
+                <div class="footer-links">
+                    <h4>Enlaces útiles</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="descubre.html">Descubre</a></li>
+                        <li><a href="#localizacion">Localización</a></li>
+                        <li><a href="#transporte">Transporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Conecta</h4>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-copy">
+                <p>&copy; 2025 Edimburgo City. Todos los derechos reservados.</p>
+            </div>
+        </footer>
                     
 
 
@@ -148,6 +280,6 @@
         
 
  
-      <script src="script.js"></script>
+      
     </body> 
 </html>
