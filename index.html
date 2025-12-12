@@ -7,8 +7,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <title>Edimburgo City</title>
        <link rel="stylesheet" href="styles.css" />
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.min.js"></script>
-       
+       <script src="js/jquery-3.6.1.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 
 
@@ -116,12 +116,18 @@
                 </div>
           </div>
         </section>
+
+
+
+
         <!-- TRASPORTE -->
 
         <section class="transporte" id="transporte">
+            
+
             <div class="transporte-header">
-                <h2>Cómo moverte por Edimburgo</h2>
-                <p>Opciones rápidas, accesibles y cómodas para recorrer la ciudad.</p>
+                <h2>Trasportes</h2>
+                
             </div>
 
             <div class="transporte-grid">
@@ -193,8 +199,10 @@
                 </article>
             </div>
 
-           <canvas id="myChart" width="400" height="400"></canvas>
-
+        <section class="chart-section">
+         <h2>Visitantes por Mes</h2>
+         <canvas id="miChart" width="400" height="200"></canvas>
+        </section>
 
 
 

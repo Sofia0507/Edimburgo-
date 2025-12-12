@@ -9,7 +9,6 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <title>Edimburgo City</title>
        <link rel="stylesheet" href="styles.css" />
-       <script src="js/script.js"></script>
 
     </head>
 
@@ -76,66 +75,32 @@
 
                 <button class="nav prev"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="nav next"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
+            
 
-            <div class="curiosidad-detalle">
-                <h3 id="detalle-titulo">El Bosque de las Hadas</h3>
-                <p id="detalle-descripcion">Un rincón mágico donde las leyendas aún viven entre los árboles y la niebla.</p>
+                <div class="curiosidad-detalle">
+                    <h3 id="detalle-titulo">El Bosque de las Hadas</h3>
+                    <p id="detalle-descripcion">Un rincón mágico donde las leyendas aún viven entre los árboles y la niebla.</p>
+                </div>
             </div>
-
         </section>
 
         
 
-        <section class="destinos">
-            <div class="destino-carousel">
-                <div class="destino-track">
-                <div class="destino-card active" data-id="chileno">
-                    <img src="img/DedoHume.jpg" alt="Chileno Bay">
-                    <div class="info">
-                    <h2>Chileno Bay</h2>
-                    <p>Los Cabos, México</p>
-                    </div>
-                </div>
-                <div class="destino-card" data-id="driftwood">
-                    <img src="img/cementerio.jpg" alt="Driftwood">
-                    <div class="info">
-                    <h2>Driftwood</h2>
-                    <p>Austin, Texas</p>
-                    </div>
-                </div>
-                <div class="destino-card" data-id="playa">
-                    <img src="img/historia3.jpg" alt="Playa Grande">
-                    <div class="info">
-                    <h2>Playa Grande</h2>
-                    <p>Río San Juan, República Dominicana</p>
-                    </div>
-                </div>
-                </div>
-
-                <div class="drag-label">Hold and Drag to See Next Post</div>
-                <div class="nav-arrows">
-                <button class="prev">‹</button>
-                <button class="next">›</button>
-                </div>
-                <div class="progress-bar">
-                <div class="progress-fill"></div>
-                </div>
-            </div>
-        </section>  
+    
+        <!-- ALOJAMIENTO -->
          
         <section class="alojamiento" id="alojamiento">
-            <h2>Dónde alojarse en Edimburgo</h2>
+            <h2>Dónde alojarse</h2>
 
             <div class="filtros">
                 <button class="filtro activo" data-categoria="todos">Todos</button>
-                <button class="filtro" data-categoria="histórico">Zona histórica</button>
+                <button class="filtro" data-categoria="historico">Zona histórica</button>
                 <button class="filtro" data-categoria="moderno">Zona moderna</button>
                 <button class="filtro" data-categoria="alternativo">Alternativo</button>
             </div><div class="grid-alojamiento">
             <!-- Old Town -->
-            <div class="card-alojamiento" data-categoria="histórico">
-                <img src="img/DedoHume.jpg" alt="Old Town">
+            <div class="card-alojamiento" data-categoria="historico">
+                <img src="img/oldtown.avif" alt="Old Town">
                 <div class="info">
                     <h3>Old Town</h3>
                     <p class="rating">⭐ 4.8</p>
@@ -145,7 +110,7 @@
 
              <!-- New Town -->
             <div class="card-alojamiento" data-categoria="moderno">
-                <img src="img/taxi.jpg" alt="New Town">
+                <img src="img/new town.webp" alt="New Town">
                 <div class="info">
                     <h3>New Town</h3>
                     <p class="rating">⭐ 4.6</p>
@@ -155,7 +120,7 @@
 
             <!-- Leith -->
             <div class="card-alojamiento" data-categoria="alternativo">
-                <img src="img/tranvia.jpg" alt="Leith">
+                <img src="img/leith.jpg" alt="Leith">
                 <div class="info">
                     <h3>Leith</h3>
                     <p class="rating">⭐ 4.5</p>
@@ -165,7 +130,7 @@
 
              <!-- Dean Village -->
             <div class="card-alojamiento" data-categoria="histórico">
-                <img src="img/bus.jpg" alt="Dean Village">
+                <img src="img/deanvillage.jpg" alt="Dean Village">
                 <div class="info">
                     <h3>Dean Village</h3>
                     <p class="rating">⭐ 4.7</p>
@@ -174,7 +139,7 @@
 
             </div><!-- Stockbridge -->
             <div class="card-alojamiento" data-categoria="moderno">
-                <img src="img/bosquehadas.jpg" alt="Stockbridge">
+                <img src="img/stockbrige.jpg" alt="Stockbridge">
                 <div class="info">
                     <h3>Stockbridge</h3>
                     <p class="rating">⭐ 4.6</p>
@@ -184,7 +149,7 @@
 
             <!-- Southside -->
             <div class="card-alojamiento" data-categoria="alternativo">
-                <img src="img/cementerio.jpg" alt="Southside">
+                <img src="img/southside.jpeg" alt="Southside">
                 <div class="info">
                     <h3>Southside</h3>
                     <p class="rating">⭐ 4.4</p>
@@ -194,34 +159,259 @@
             </div>
         </section>
 
-        <section class="quever" id="quever">
-            <h2>Qué ver y hacer en Edimburgo</h2>
 
-            <div class="grid-destinos">
-                <div class="destino">
-                <img src="img/castillo.jpg" alt="Castillo de Edimburgo">
-                <h3>Castillo de Edimburgo</h3>
+        <!-- QUE VER Y HACER -->
+
+        <section class="planes">
+            <div>
+              <h2>Que ver y hacer</h2>
+
+              <div class="plan-contenedor">
+                    <div class="plan-imagen">
+                        <img src="img/castillo de edimburgo.jpg" alt="Edinburgh Castle">
+                    </div>
+
+                    <div class="plan-info">
+                            <h1>Edinburgh Castle</h1>
+                            <p>
+                                Descubre uno de los monumentos más emblemáticos de Escocia. Camina por sus
+                                murallas, conoce la historia de los reyes escoceses y disfruta de las mejores
+                                vistas de toda la ciudad.
+                            </p>
+
+                            <a href="https://www.edinburghcastle.scot/tickets" 
+                                target="_blank" 
+                                class="btn-plan">
+                                Comprar entrada
+                            </a>
+                    </div>
+
                 </div>
-                <div class="destino">
-                <img src="img/arthursseat.jpg" alt="Arthur’s Seat">
-                <h3>Arthur’s Seat</h3>
+
+                <div class="plan-contenedor">
+                    <div class="plan-imagen">
+                        <img src="img/royal.jpg" alt="Edinburgh Castle">
+                    </div>
+
+                    <div class="plan-info">
+                            <h1>Royal Yacht Britannia</h1>
+                            <p>
+                                Haz una caminata hasta la cima de este antiguo volcán y obtén una vista 
+                                panorámica de Edimburgo. Perfecto para los amantes de la naturaleza y la aventura
+                            </p>
+
+                            <a href="https://www.royalyachtbritannia.co.uk/visit/plan-your-visit/tickets-and-prices/" 
+                                target="_blank" 
+                                class="btn-plan">
+                                Comprar entrada
+                            </a>
+                    </div>
+
                 </div>
-                <div class="destino">
-                <img src="img/royalmile.jpg" alt="Royal Mile">
-                <h3>Royal Mile</h3>
+
+
+                <div class="plan-contenedor">
+                    <div class="plan-imagen">
+                        <img src="img/ilusions.jpg" alt="Edinburgh Castle">
+                    </div>
+
+                    <div class="plan-info">
+                            <h1>Camera Obscura & World of Illusions</h1>
+                            <p>
+                                Descubre uno de los lugares más divertidos y sorprendentes de Edimburgo. Explora más de cinco pisos llenos de ilusiones ópticas, túneles que desafían tus sentidos, espejos deformantes, hologramas y experiencias interactivas que te harán dudar de todo.
+                                Además, disfruta del famoso show de la Camera Obscura, una forma mágica y antigua de ver la ciudad en tiempo real.
+                                Perfecto para parejas, amigos y familias — saldrás con mil fotos increíbles.
+                            </p>
+
+                            <a href="https://www.camera-obscura.co.uk/tickets" 
+                                target="_blank" 
+                                class="btn-plan">
+                                Comprar entrada
+                            </a>
+                    </div>
+
                 </div>
-                <div class="destino">
-                <img src="img/deanvillage.jpg" alt="Dean Village">
-                <h3>Dean Village</h3>
+
+
+                <div class="plan-contenedor">
+                    <div class="plan-imagen">
+                        <img src="img/wisky.jpg" alt="Edinburgh Castle">
+                    </div>
+
+                    <div class="plan-info">
+                            <h1>The Scotch Whisky Experience</h1>
+                            <p>
+                                Descubre la fascinante historia del whisky escocés. 
+                                Realiza un recorrido por la destilería y aprende a apreciar una de las bebidas más representativas de Escocia
+                            </p>
+
+                            <a href="https://www.scotchwhiskyexperience.co.uk/whisky-tour-vouchers-or-whisky-tour-gift-vouchers/" 
+                                target="_blank" 
+                                class="btn-plan">
+                                Comprar entrada
+                            </a>
+                    </div>
+
                 </div>
-                <div class="destino">
-                <img src="img/museo.jpg" alt="Museo Nacional">
-                <h3>Museo Nacional</h3>
+
+
+                <div class="plan-contenedor">
+                    <div class="plan-imagen">
+                        <img src="img/palacio.jpg" alt="Edinburgh Castle">
+                    </div>
+
+                    <div class="plan-info">
+                            <h1>Palacio de Holyroodhouse</h1>
+                            <p>
+                             Visita la residencia oficial de la Reina en Escocia y descubre los lujosos apartamentos reales y los hermosos jardines.
+                            </p>
+
+                            <a href="https://book.edinburgh-tickets.com/es/book/7886/select/?_gl=1%2Abo8acw%2A_gcl_aw%2AR0NMLjE3NjU1MzUwODEuQ2p3S0NBaUFsLV9KQmhCakVpd0FuM3JON1lqaS1SYUN6RlNjbHlnSWpMVmMxODVWWEVwRmNOX2lGMjRBcXQ2Yng1Y2UweF9WRFJrX3hob0NYazRRQXZEX0J3RQ..%2A_gcl_au%2AMTIwNTIxMDcyNS4xNzY1NTM1MDgx%2A_ga%2AMTk3NzEzOTU3MS4xNzY1NTM1MDgx%2A_ga_Y45PC9R73C%2AczE3NjU1MzUwODEkbzEkZzAkdDE3NjU1MzUwODMkajU4JGwwJGgw&cookieBanner=false" 
+                                target="_blank" 
+                                class="btn-plan">
+                                Comprar entrada
+                            </a>
+                    </div>
+
                 </div>
+
+                <div class="plan-contenedor">
+                    <div class="plan-imagen">
+                        <img src="img/higlands.jpg" alt="Edinburgh Castle">
+                    </div>
+
+                    <div class="plan-info">
+                            <h1>Excursión a las Highlands</h1>
+                            <p>
+                               Sumérgete en los paisajes más espectaculares de Escocia con una excursión a las Highlands. Montañas infinitas, lagos misteriosos, castillos perdidos entre la niebla y pueblos donde parece que el tiempo se ha detenido.
+                               Si te gusta la naturaleza, la historia o simplemente quieres vivir “la Escocia de película”, este plan te enamora.
+                               Podrás conocer el mítico Loch Ness, recorrer valles como Glen Coe y sentir de verdad la magia salvaje del país.
+                            </p>
+
+                            <a href="https://tierrasaltasescocia.com/isla-de-skye-escocia/" 
+                                target="_blank" 
+                                class="btn-plan">
+                                Comprar entrada
+                            </a>
+                    </div>
+
+                </div>
+
+                <div class="plan-contenedor">
+                    <div class="plan-imagen">
+                        <img src="img/miedo.jpg" alt="Edinburgh Castle">
+                    </div>
+
+                    <div class="plan-info">
+                            <h1>Edinburgh Dungeon</h1>
+                            <p>
+                                Sumérgete en una experiencia aterradora y divertida. Revive las leyendas oscuras de Edimburgo en este divertido y espeluznante recorrido.
+                            </p>
+
+                            <a href="https://www.thedungeons.com/edinburgh/tickets-passes/" 
+                                target="_blank" 
+                                class="btn-plan">
+                                Comprar entrada
+                            </a>
+                    </div>
+
+                </div>
+
+                <div class="plan-contenedor">
+                    <div class="plan-imagen">
+                        <img src="img/harry.jpg" alt="Edinburgh Castle">
+                    </div>
+
+                    <div class="plan-info">
+                            <h1>Free Tour Harry Potter por el centro de Edimburgo</h1>
+                            <p>
+                             Recorrido guiado a pie por los lugares que inspiraron la magia: Royal Mile, Victoria Street (que recuerda al Callejón Diagon), imágenes del café donde J.K. Rowling escribió parte de la saga y el cementerio de Greyfriars con nombres como Tom Riddle. Incluye guía en español y dura aproximadamente 90 minutos.
+                            </p>
+
+                            <a href="https://www.atrapalo.com/actividades/free-tour-de-harry-potter-por-edimburgo_e4927588/?utm_source=chatgpt.com" 
+                                target="_blank" 
+                                class="btn-plan">
+                                Comprar entrada
+                            </a>
+                    </div>
+
+                </div>
+
+    
             </div>
-            </section>
+        </section>
 
 
+        <!-- GASTRONIMIA -->
+
+       <section class="gastronomia">
+  <h1 class="titulo-principal">Gastronomía</h1>
+
+  <!-- Bloque central (detalle grande) -->
+  <div class="plato-central">
+    <img src="img/plato1.png" alt="Plato principal" id="detalleImg">
+    <div class="info">
+      <h2 id="detalleTitulo">Desayuno Escocés</h2>
+      <p id="detalleDescripcion">Huevos, beicon, salchicha Lorne, haggis, morcilla, tattie scones y más.</p>
+    </div>
+  </div>
+
+        <!-- Lista de categorías (solo imagen + título) -->
+        <div class="categorias">
+            <div class="categoria"
+                data-img="img/plato1.png"
+                data-titulo="Desayuno Escocés"
+                data-descripcion="El desayuno escocés, conocido como Full Scottish Breakfast, es una versión abundante y tradicional del desayuno británico que se distingue por incluir ingredientes únicos de Escocia como la salchicha Lorne de forma cuadrada, el haggis elaborado con vísceras y avena, la morcilla negra (black pudding) y las tattie scones o tortitas de patata, acompañados de huevos, beicon, champiñones, tomate frito, judías en salsa y tostadas; es un plato contundente pensado para aportar energía desde primera hora del día y hoy se considera una experiencia gastronómica imprescindible para quienes visitan Edimburgo.">
+            <img src="img/plato1.png" alt="Desayuno Escocés">
+            <h3>Desayuno Escocés</h3>
+            </div>
+
+            <div class="categoria"
+                data-img="img/plato2.png"
+                data-titulo="Fish and Chips"
+                data-descripcion="El Fish and Chips es uno de los platos más emblemáticos del Reino Unido y muy popular en Edimburgo, donde se le conoce como fish supper. Consiste en pescado blanco —generalmente bacalao o eglefino— rebozado en una masa ligera y crujiente, acompañado de papas fritas gruesas y doradas. Se suele servir con salsa tártara, vinagre de malta o puré de guisantes, y en Escocia es habitual encontrarlo en los tradicionales chippies (tiendas de fish and chips). Nacido en el siglo XIX como una comida sencilla y económica para la clase trabajadora, hoy es considerado un clásico reconfortante que combina sabor, tradición y la identidad culinaria británica.">
+            <img src="img/plato2.png" alt="Desayuno Escocés">
+            <h3>Fish and Chips</h3>
+            </div>
+
+            <div class="categoria"
+                data-img="img/plato3.png"
+                data-titulo="Cullen Skink"
+                data-descripcion="La Cullen Skink es la sopa más tradicional de Escocia y
+                 un plato muy apreciado en Edimburgo. Se elabora con pescado ahumado —generalmente eglefino—,
+                  patatas y cebolla, cocidos en leche o nata para darle una textura cremosa y un sabor 
+                  intenso y reconfortante. Su origen está en la localidad costera de Cullen, pero hoy 
+                  se sirve en pubs y restaurantes de la capital como una muestra auténtica de la cocina
+                   escocesa. Es espesa, nutritiva y perfecta para los fríos días de invierno, convirtiéndose 
+                   en una experiencia gastronómica imprescindible para quienes desean probar la verdadera esencia culinaria de Escocia.">
+            <img src="img/plato3.png" alt="Desayuno Escocés">
+            <h3>Cullen Skink</h3>
+            </div>
+
+            <div class="categoria"
+                data-img="img/plato4.png"
+                data-titulo="Cullen Skink"
+                data-descripcion="La Cullen Skink es la sopa más tradicional de Escocia y
+                 un plato muy apreciado en Edimburgo. Se elabora con pescado ahumado —generalmente eglefino—,
+                  patatas y cebolla, cocidos en leche o nata para darle una textura cremosa y un sabor 
+                  intenso y reconfortante. Su origen está en la localidad costera de Cullen, pero hoy 
+                  se sirve en pubs y restaurantes de la capital como una muestra auténtica de la cocina
+                   escocesa. Es espesa, nutritiva y perfecta para los fríos días de invierno, convirtiéndose 
+                   en una experiencia gastronómica imprescindible para quienes desean probar la verdadera esencia culinaria de Escocia.">
+            <img src="img/plato4.png" alt="Desayuno Escocés">
+            <h3>Cullen Skink</h3>
+            </div>
+
+
+
+
+
+
+
+
+           
+        </div>
+        </section>
 
 
 
@@ -280,6 +470,6 @@
         
 
  
-      
+      <script src="js/script.js"></script>
     </body> 
 </html>

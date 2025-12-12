@@ -313,7 +313,7 @@ body {
 /* PAGINA2 */
 
 .carrousel h2 {
-  font-family: "Inter", sans-serif;
+  font-family: pecita, cursive;
   font-weight: 700;
   font-size: 3rem;
   margin-bottom: 3rem;
@@ -742,25 +742,110 @@ body {
 }
 
 
+/* TRASPORTES */
+
+
+#transporte {
+   position: relative;
+  overflow: hidden; 
+  min-height: 500px; 
+}
+
+.trasporte{
+  position: relative;
+    max-width: 2000px; /* tamaño del contenedor */
+    margin: 0 auto; /* centrado horizontal */
+    padding: 40px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.trasporte img {
+  width: 100%;       /* ocupa todo el ancho disponible */
+  height: auto;      /* mantiene proporción */
+  border-radius: 10px;
+}
+
+
+
+
 .transporte-header {
-  max-width: 900px;
-  margin: 0 auto 2rem;
+  position: relative;
+  z-index: 1; /* para que el contenido esté encima de la imagen */
+  padding: 4rem 1rem;
   text-align: center;
+}
+
+
+.transporte-header h2 {
+ 
+  margin: 0 auto 5rem;
+  text-align: center;
+  font-family: pecita, cursive;
+  color: #F2C94C;
+  font-size: 5rem;
+
 }
 
 .transporte-grid {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1rem;                              
+  max-width: 900px;                      
+  margin: 0 auto;                         
+  padding: 0.5rem;
 }
 
+.transporte-header p{
+  font-family: "Source Sans Pro", sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+
+
 .card-transporte {
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(6px);
-  border-radius: 16px;
-  padding: 1.25rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 900px;   
+  border-radius: 22px;
+  height: 420px;
+  padding: 0; 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+
+.card-transporte::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.65);
+}
+
+
+.card-transporte:nth-child(1)::before { background-image: url("img/tranvia.jpg"); }
+.card-transporte:nth-child(2)::before { background-image: url("img/bus.jpg"); }
+.card-transporte:nth-child(3)::before { background-image: url("img/taxi.jpg"); }
+.card-transporte:nth-child(4)::before { background-image: url("img/bici.jpg"); }
+
+
+
+
+.card-transporte > * {
+  position: relative;
+  z-index: 2;
+  padding: 0 1.3rem;
 }
 
 .card-transporte:hover {
@@ -771,62 +856,68 @@ body {
 .card-top {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
+  gap: .6rem;
+  margin-bottom: .3rem;
 }
-
 .card-top i {
-  font-size: 1.5rem;
-  color: #0ea5e9; /* turquesa accesible */
+  font-size: 1.7rem;
+  color: #fff;
 }
 
 
 .card-transporte h3 {
   margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
-
 
 
 .btn-detalles {
   display: inline-block;
-  padding: 0.6rem 1rem;
+  padding: .6rem 1rem;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  font-weight: 600;
   border-radius: 10px;
-  border: none;
-  background: #38bdf8;
-  color: #0b1220;
-  font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s ease;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(6px);
+  transition: background .25s ease, border .25s ease;
 }
 
-
 .btn-detalles:hover {
-  background: #0ea5e9;
+  background: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.4);
+}
+
+.card-desc {
+  font-size: .95rem;
+  opacity: .9;
+  margin-bottom: 1rem;
 }
 
 .detalles {
-  margin-top: 0.75rem;
-  border-top: 1px solid rgba(2,6,23,0.08);
-  padding-top: 0.75rem;
+  padding: 1rem 1.3rem 1.3rem;
+  background: rgba(0,0,0,0.35);
+  border-radius: 0 0 22px 22px;
+  backdrop-filter: blur(8px);
 }
+
+.card-transporte:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.45);
+}
+
+.detalles ul { margin: 0; padding-left: 1.2rem; }
+.detalles li { margin-bottom: .4rem; }
+
 
 /* CHART.JS */
-.turistas {
-  padding: 4rem 2rem;
-}
 
 
-.turistas-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
 
-.chart-container {
-  max-width: 900px;
-  margin: 0 auto;
-  height: 400px; /* altura fija para responsividad */
-}
-
+/* CURIOSIDADES */
 .curiosidad-detalle {
   margin-top: 2rem;
   background: rgba(255,255,255,0.8);
@@ -844,31 +935,98 @@ body {
   margin-bottom: 0.5rem;
 }
 
+/* alojamiento */
 
 .alojamiento {
   padding: 4rem 2rem;
   text-align: center;
+  max-width: 1200px;
+  margin: auto;
 }
+
+.alojamiento h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-family:pecita, cursive;
+  color: #F2C94C;
+}
+
 .filtros {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
   flex-wrap: wrap;
+  margin-bottom: 2.5rem;
 }
 
+
+.filtro {
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  background: #f1f5f9;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+}
+
+.filtro:hover {
+  background: #e2e8f0;
+}
 
 .filtro.activo {
-  background: #38bdf8;
+  background: #F2C94C;
   color: white;
+  font-weight: 600;
 }
-
 
 .grid-alojamiento {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
+
+.card-alojamiento {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.card-alojamiento:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.card-alojamiento img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-alojamiento .info {
+  padding: 1.2rem;
+  text-align: left;
+}
+
+
+.card-alojamiento h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.card-alojamiento .rating {
+  font-size: 0.9rem;
+  color: #f97316;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
 
 @media (max-width: 768px) {
   .grid-alojamiento {
@@ -958,3 +1116,178 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   text-align: center;
+}
+
+
+
+/* PLANES */
+
+.planes > div {
+    text-align: center;
+}
+
+.planes {
+  background-color: #0f172a; /* gris claro, puedes cambiarlo */
+  padding: 200px; /* espacio interno para que el contenido no quede pegado */
+}
+
+
+.planes > div:first-child h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 4rem;
+    color: #F2C94C;
+    font-family: pecita, cursive;
+}
+
+
+
+
+
+
+.plan-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 40px auto;      /* separación entre planes */
+    padding: 30px;          /* espacio interno */
+    background: #fff;       /* FONDO BLANCO */
+   overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1); 
+
+}
+
+
+
+.plan-imagen,
+.plan-info {
+    flex: 2;
+    max-width: 50%; /* ambos ocupan la MISMA proporción */
+}
+
+.plan-info h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #000000;
+    font-family:"Source Sans Pro", sans-serif;
+    text-align: justify;
+}
+
+.plan-info p {
+    font-size: 15px;
+    line-height: 1;
+    color: #444;
+    text-align: justify;
+    max-width: 455px;
+}
+
+.btn-plan {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #2dbb6e;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn-plan:hover {
+    background-color: #219d5a;
+}
+
+
+.plans-imagen {
+    width: 50%;
+
+}
+
+.plan-imagen img {
+    width: 100%;
+    height: 400px;     /* ← Tamaño coherente */
+    object-fit: cover; /* ← NO deformación */
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+/* Alternar imagen derecha/izquierda */
+.plan-contenedor:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+/* gastronimia */
+
+.gastronomia {
+  text-align: center;
+  background-color: #4B8F6B;
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.titulo-principal {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+  font-family: pecita, curv;
+}
+
+.plato-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.plato-central img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.info h2 {
+  font-size: 1.8em;
+  margin-top: 20px;
+}
+.info p {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 10px;
+  color: #666;
+  text-align: justify;
+}
+
+.categorias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.categoria {
+  width: 200px;
+  text-align: center;
+}
+
+.categoria img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.categoria h3 {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #444;
+}
+
+.categoria p {
+  font-size: 0.9em;
+  color: #777;
+}
+
