@@ -8,7 +8,6 @@
         <title>Edimburgo City</title>
        <link rel="stylesheet" href="styles.css" />
        <script src="js/jquery-3.6.1.min.js"></script>
-       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 
 
@@ -31,27 +30,32 @@
       <div class="hero-fade"></div>
 
        <nav id="main-menu">
-           <ul>
-             <li><a href="index.html">Información general</a></li>
-             <li><a href="descubre.html">Descubre</a></li>
-           </ul>
-       </nav>
+            <div class="menu-container">
+                <a href="#" class="logo">MiWeb</a>
+                <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+            
+              <ul class="menu">
+                 <li><a href="index.html">Información general</a></li>
+                 <li><a href="descubre.html">Descubre</a></li>
+              </ul>
+            </div>
+        </nav>
 
         <section class="bienvenida animado">
            <section class="bloque-bienvenida">
-            <div class="contenedor">
-                <div class="texto">
-                <h1>Bienvenido</h1>
-                <h2>Aquí no solo visitas una ciudad. Te sumerges en sus leyendas. Te transformas.</h2>
-                <p>
-                   Cada rincón de Edimburgo está pensado para que vivas experiencias auténticas, llenas de historia, misterio y belleza natural. Queremos que cada paso que des entre sus calles empedradas, sus colinas y sus castillos deje una 
-                   huella positiva en ti, en quienes te cruzas, y en la memoria viva de esta ciudad que respira magia y resistencia.
-                </p>
-                
+                <div class="contenedor">
+                    <div class="texto">
+                    <h1>Bienvenido</h1>
+                    <h2>Aquí no solo visitas una ciudad. Te sumerges en sus leyendas. Te transformas.</h2>
+                    <p>
+                    Cada rincón de Edimburgo está pensado para que vivas experiencias auténticas, llenas de historia, misterio y belleza natural. Queremos que cada paso que des entre sus calles empedradas, sus colinas y sus castillos deje una 
+                    huella positiva en ti, en quienes te cruzas, y en la memoria viva de esta ciudad que respira magia y resistencia.
+                    </p>
+                    
+                    </div>
+                    <div class="imagen"></div>
                 </div>
-                <div class="imagen"></div>
-            </div>
-        </section>
+          </section>
        </section>
         
 
@@ -118,7 +122,7 @@
                         <h3>Tranvía</h3>
                     </div>
                     <p class="card-desc">Conecta el aeropuerto, zonas clave y el centro histórico con buena frecuencia.</p>
-                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-tranvia" onclick="toggleDetalles('det-tranvia', this)">Ver detalles</button>
+                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-tranvia">Ver detalles</button>
                     <div id="det-tranvia" class="detalles" hidden>
                         <ul>
                         <li><strong>Horarios:</strong> Desde temprano hasta medianoche.</li>
@@ -135,7 +139,7 @@
                         <h3>Autobús</h3>
                     </div>
                     <p class="card-desc">Red amplia que cubre barrios y atracciones principales.</p>
-                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-bus" onclick="toggleDetalles('det-bus', this)">Ver detalles</button>
+                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-bus">Ver detalles</button>
                     <div id="det-bus" class="detalles" hidden>
                         <ul>
                         <li><strong>Horarios:</strong> Alta frecuencia en hora punta; nocturnos disponibles.</li>
@@ -151,7 +155,7 @@
                         <h3>Taxi</h3>
                     </div>
                     <p class="card-desc">Disponibles 24/7; prácticos para trayectos cortos o nocturnos.</p>
-                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-taxi" onclick="toggleDetalles('det-taxi', this)">Ver detalles</button>
+                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-taxi" >Ver detalles</button>
                     <div id="det-taxi" class="detalles" hidden>
                         <ul>
                         <li><strong>Cómo pedir:</strong> App, parada señalizada o teléfono.</li>
@@ -168,7 +172,7 @@
                         <h3>Bicicleta</h3>
                     </div>
                     <p class="card-desc">Rutas escénicas y carriles en expansión; ideal para explorar parques.</p>
-                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-bici" onclick="toggleDetalles('det-bici', this)">Ver detalles</button>
+                    <button class="btn-detalles" aria-expanded="false" aria-controls="det-bici">Ver detalles</button>
                     <div id="det-bici" class="detalles" hidden>
                         <ul>
                         <li><strong>Alquiler:</strong> Tiendas locales y sistemas de share.</li>
@@ -179,9 +183,15 @@
                 </article>
             </div>
 
-        <section class="chart-section">
-         <h2>Visitantes por Mes</h2>
-         <canvas id="miChart" width="400" height="200"></canvas>
+        </section>
+
+
+       <!-- CHART.JS -->
+        <section>
+           
+            <div>
+                <canvas id="linea"></canvas>
+            </div>
         </section>
 
 
@@ -247,7 +257,7 @@
         </footer>
                     
 
-
+        <script src="js/jquery-3.6.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="js/script.js"></script>
     </body>  

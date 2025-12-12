@@ -15,12 +15,25 @@
    
    
    <body>
+   
         <nav id="main-menu">
-           <ul>
-             <li><a href="index.html">Información general</a></li>
-             <li><a href="descubre.html">Descubre</a></li>
-           </ul>
+            <div class="menu-container">
+
+                <a href="#" class="logo">MiWeb</a>
+                <button class="menu-toggle" aria-label="Abrir menú">
+                &#9776; <!-- icono hamburguesa -->
+               </button>
+                <ul class="menu">
+                    <li><a href="index.html">Información general</a></li>
+                    <li><a href="descubre.html">Descubre</a></li>
+                    <li><a href="descubre.html">Contacto</a></li>
+
+                </ul>
+            </div>   
        </nav>
+
+       <!-- Overlay para menú móvil -->
+       <div id="menu-overlay"></div>
 
      <!-- PAGINA 2- DESCUBRE -->
 
@@ -100,98 +113,160 @@
         </section>
 
      
-        <!-- <section class="carrousel">
-            <h2>Curiosidades</h2>
-            <div class="carousel">
-                <div class="carousel-track">
-                    <div class="card" style="--i:-2">
-                     <img src="img/DedoHume.jpg">
-                     <div class="overlay">
-                            <h1>El dedo de David Hume</h1>
-                            <p>Dicen que trae suerte si lo tocas antes de un examen... </p>
-                        </div>
-                    </div>
-                    
-
-                    <div class="card" style="--i:-1">
-                    <img src="img/harrypother.webp">
-                    <div class="overlay">
-                            <h1>La magia de Harry Potter</h1>
-                            <p>Entre calles y cafés nació un mundo de hechizos..</p>
-                        </div>
-                    </div>
-
-                    <div class="card active" style="--i:0">
-                    <img src="img/bosquehadas.jpg">
-                        <div class="overlay">
-                            <h1>El Bosque de las Hadas</h1>
-                            <p>Un rincón mágico donde las leyendas aún </p>
-                        </div>
-                    </div>
-
-                    <div class="card" style="--i:1">
-                      <img src="img/cementerio.jpg">
-                       <div class="overlay">
-                            <h1>Picnics en los cementerios</h1>
-                            <p>Un lugar de descanso que también guarda momentos cotidianos...</p>
-                        </div>
-
-                    </div>
-
-                    <div class="card" style="--i:2">
-                     <img src="img/bobby.jpg">
-                     <div class="overlay">
-                            <h1>Greyfriars Bobby</h1>
-                            <p>Un amigo que nunca abandonó a su dueño...</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <button class="nav prev"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="nav next"><i class="fa-solid fa-chevron-right"></i></button>
-            
-
-                <div class="curiosidad-detalle">
-                    <h3 id="detalle-titulo">El Bosque de las Hadas</h3>
-                    <p id="detalle-descripcion">Un rincón mágico donde las leyendas aún viven entre los árboles y la niebla.</p>
-                </div>
-            </div>
-        </section> -->
 
         <!-- CURIOSIDADES -->
-            <section class="curiosidades" id="curiosidades">
+          <section class="curiosidades" id="curiosidades">
                 <div class="curiosidades-header">
                     <h2>Curiosidades</h2>
-                    <p>Datos interesantes y divertidos sobre Edimburgo que te sorprenderán.</p>
                 </div>
 
                 <div class="curiosidades-grid">
+
+                    <!-- 1. Harry Potter -->
                     <article class="card-curiosidad">
-                    <h3>Harry Potter</h3>
-                    <p>J.K. Rowling escribió parte de la saga en cafés del centro histórico de Edimburgo.</p>
+                        <img src="img/harrypother.webp" alt="Harry Potter en Edimburgo">
+                        <h3>La magia de Harry Potter</h3>
+                        <p>Entre calles y cafés nació un mundo de hechizos..</p>
+                        <button class="btn-curiosidad" onclick="openModal('modal-hp')">Ver más</button>
                     </article>
 
+                    <div id="modal-hp" class="modal" onclick="closeModal(event, 'modal-hp')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal(event, 'modal-hp')">&times;</span>
+                            <h2>La magia de Harry Potter</h2>
+                            <p>
+                                Edimburgo fue inspiración directa para lugares y personajes del universo de Harry Potter.
+                                J.K. Rowling escribió gran parte de la saga en cafés como The Elephant House, y muchas
+                                calles de la ciudad recuerdan al Callejón Diagon.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2. Bosque de las Hadas -->
                     <article class="card-curiosidad">
-                    <h3>Festival de Edimburgo</h3>
-                    <p>El festival más grande de artes escénicas del mundo se celebra cada verano.</p>
+                        <img src="img/bosquehadas.jpg" alt="bosque">
+                        <h3>El Bosque de las Hadas</h3>
+                        <p>Un rincón mágico donde las leyendas aún..</p>
+                        <button class="btn-curiosidad" onclick="openModal('modal-hadas')">Ver más</button>
                     </article>
 
+                    <div id="modal-hadas" class="modal" onclick="closeModal(event, 'modal-hadas')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal(event, 'modal-hadas')">&times;</span>
+                            <h2>El Bosque de las Hadas</h2>
+                            <p>
+                                Un rincón escondido donde la vegetación, las rocas y los senderos parecen salidos de un cuento.
+                                Se dice que aquí habitaban seres mágicos y que las colinas guardan energías especiales.
+                                Es un sitio perfecto para desconectar, respirar y dejar volar la imaginación.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 3. Picnics en cementerios -->
                     <article class="card-curiosidad">
-                    <h3>Castillos misteriosos</h3>
-                    <p>Edimburgo cuenta con varios castillos antiguos llenos de leyendas y fantasmas.</p>
+                        <img src="img/cementerio.jpg" alt="cementerio">
+                        <h3>Picnics en los cementerios</h3>
+                        <p>Un lugar de descanso que también guarda momentos cotidianos...</p>
+                        <button class="btn-curiosidad" onclick="openModal('modal-cementerio')">Ver más</button>
                     </article>
 
+                    <div id="modal-cementerio" class="modal" onclick="closeModal(event, 'modal-cementerio')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal(event, 'modal-cementerio')">&times;</span>
+                            <h2>Picnics en los cementerios</h2>
+                            <p>
+                                En Edimburgo, muchos cementerios son auténticos parques. 
+                                Antiguamente la gente acudía a leer, charlar o incluso hacer picnic.
+                                Hoy siguen siendo lugares tranquilos llenos de esculturas, árboles y leyendas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 4. Bobby -->
                     <article class="card-curiosidad">
-                    <h3>Calles adoquinadas</h3>
-                    <p>La ciudad conserva calles con adoquines que datan de hace siglos, ¡perfectas para fotos!</p>
+                        <img src="img/bobby.jpg" alt="Greyfriars Bobby">
+                        <h3>Greyfriars Bobby</h3>
+                        <p>Un amigo que nunca abandonó a su dueño..</p>
+                        <button class="btn-curiosidad" onclick="openModal('modal-bobby')">Ver más</button>
                     </article>
+
+                    <div id="modal-bobby" class="modal" onclick="closeModal(event, 'modal-bobby')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal(event, 'modal-bobby')">&times;</span>
+                            <h2>Greyfriars Bobby</h2>
+                            <p>
+                                Bobby fue un pequeño perro que visitó la tumba de su dueño durante más de 14 años.
+                                Su historia de lealtad se convirtió en un símbolo de amor incondicional.
+                                Hoy su estatua sigue emocionando a todos los visitantes.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </section>
-
     
-        
+        <!-- GASTRONIMIA -->
+
+        <section class="gastronomia">
+            <h1 class="titulo-principal">Gastronomía</h1>
+
+            <!-- Bloque central (detalle grande) -->
+            <div class="plato-central">
+                <img src="img/plato1.png" alt="Plato principal" id="detalleImg">
+                <div class="info">
+                <h2 id="detalleTitulo">Desayuno Escocés</h2>
+                <p id="detalleDescripcion">Huevos, beicon, salchicha Lorne, haggis, morcilla, tattie scones y más.</p>
+                </div>
+            </div>
+
+            <!-- Lista de categorías (solo imagen + título) -->
+            <div class="categorias">
+                <div class="categoria"
+                    data-img="img/plato1.png"
+                    data-titulo="Desayuno Escocés"
+                    data-descripcion="El desayuno escocés, conocido como Full Scottish Breakfast, es una versión abundante y tradicional del desayuno británico que se distingue por incluir ingredientes únicos de Escocia como la salchicha Lorne de forma cuadrada, el haggis elaborado con vísceras y avena, la morcilla negra (black pudding) y las tattie scones o tortitas de patata, acompañados de huevos, beicon, champiñones, tomate frito, judías en salsa y tostadas; es un plato contundente pensado para aportar energía desde primera hora del día y hoy se considera una experiencia gastronómica imprescindible para quienes visitan Edimburgo.">
+                <img src="img/plato1.png" alt="Desayuno Escocés">
+                <h3>Desayuno Escocés</h3>
+                </div>
+
+                <div class="categoria"
+                    data-img="img/plato2.png"
+                    data-titulo="Fish and Chips"
+                    data-descripcion="El Fish and Chips es uno de los platos más emblemáticos del Reino Unido y muy popular en Edimburgo, donde se le conoce como fish supper. Consiste en pescado blanco —generalmente bacalao o eglefino— rebozado en una masa ligera y crujiente, acompañado de papas fritas gruesas y doradas. Se suele servir con salsa tártara, vinagre de malta o puré de guisantes, y en Escocia es habitual encontrarlo en los tradicionales chippies (tiendas de fish and chips). Nacido en el siglo XIX como una comida sencilla y económica para la clase trabajadora, hoy es considerado un clásico reconfortante que combina sabor, tradición y la identidad culinaria británica.">
+                <img src="img/plato2.png" alt="Desayuno Escocés">
+                <h3>Fish and Chips</h3>
+                </div>
+
+                <div class="categoria"
+                    data-img="img/plato3.png"
+                    data-titulo="Cullen Skink"
+                    data-descripcion="La Cullen Skink es la sopa más tradicional de Escocia y
+                    un plato muy apreciado en Edimburgo. Se elabora con pescado ahumado —generalmente eglefino—,
+                    patatas y cebolla, cocidos en leche o nata para darle una textura cremosa y un sabor 
+                    intenso y reconfortante. Su origen está en la localidad costera de Cullen, pero hoy 
+                    se sirve en pubs y restaurantes de la capital como una muestra auténtica de la cocina
+                    escocesa. Es espesa, nutritiva y perfecta para los fríos días de invierno, convirtiéndose 
+                    en una experiencia gastronómica imprescindible para quienes desean probar la verdadera esencia culinaria de Escocia.">
+                <img src="img/plato3.png" alt="Desayuno Escocés">
+                <h3>Cullen Skink</h3>
+                </div>
+
+                <div class="categoria"
+                    data-img="img/plato4.png"
+                    data-titulo="Cullen Skink"
+                    data-descripcion="La Cullen Skink es la sopa más tradicional de Escocia y
+                    un plato muy apreciado en Edimburgo. Se elabora con pescado ahumado —generalmente eglefino—,
+                    patatas y cebolla, cocidos en leche o nata para darle una textura cremosa y un sabor 
+                    intenso y reconfortante. Su origen está en la localidad costera de Cullen, pero hoy 
+                    se sirve en pubs y restaurantes de la capital como una muestra auténtica de la cocina
+                    escocesa. Es espesa, nutritiva y perfecta para los fríos días de invierno, convirtiéndose 
+                    en una experiencia gastronómica imprescindible para quienes desean probar la verdadera esencia culinaria de Escocia.">
+                <img src="img/plato4.png" alt="Desayuno Escocés">
+                <h3>Cullen Skink</h3>
+                </div>
+            </div>
+        </section>
+
 
         <!-- QUE VER Y HACER -->
 
@@ -375,77 +450,7 @@
         </section>
 
 
-        <!-- GASTRONIMIA -->
-
-       <section class="gastronomia">
-  <h1 class="titulo-principal">Gastronomía</h1>
-
-  <!-- Bloque central (detalle grande) -->
-  <div class="plato-central">
-    <img src="img/plato1.png" alt="Plato principal" id="detalleImg">
-    <div class="info">
-      <h2 id="detalleTitulo">Desayuno Escocés</h2>
-      <p id="detalleDescripcion">Huevos, beicon, salchicha Lorne, haggis, morcilla, tattie scones y más.</p>
-    </div>
-  </div>
-
-        <!-- Lista de categorías (solo imagen + título) -->
-        <div class="categorias">
-            <div class="categoria"
-                data-img="img/plato1.png"
-                data-titulo="Desayuno Escocés"
-                data-descripcion="El desayuno escocés, conocido como Full Scottish Breakfast, es una versión abundante y tradicional del desayuno británico que se distingue por incluir ingredientes únicos de Escocia como la salchicha Lorne de forma cuadrada, el haggis elaborado con vísceras y avena, la morcilla negra (black pudding) y las tattie scones o tortitas de patata, acompañados de huevos, beicon, champiñones, tomate frito, judías en salsa y tostadas; es un plato contundente pensado para aportar energía desde primera hora del día y hoy se considera una experiencia gastronómica imprescindible para quienes visitan Edimburgo.">
-            <img src="img/plato1.png" alt="Desayuno Escocés">
-            <h3>Desayuno Escocés</h3>
-            </div>
-
-            <div class="categoria"
-                data-img="img/plato2.png"
-                data-titulo="Fish and Chips"
-                data-descripcion="El Fish and Chips es uno de los platos más emblemáticos del Reino Unido y muy popular en Edimburgo, donde se le conoce como fish supper. Consiste en pescado blanco —generalmente bacalao o eglefino— rebozado en una masa ligera y crujiente, acompañado de papas fritas gruesas y doradas. Se suele servir con salsa tártara, vinagre de malta o puré de guisantes, y en Escocia es habitual encontrarlo en los tradicionales chippies (tiendas de fish and chips). Nacido en el siglo XIX como una comida sencilla y económica para la clase trabajadora, hoy es considerado un clásico reconfortante que combina sabor, tradición y la identidad culinaria británica.">
-            <img src="img/plato2.png" alt="Desayuno Escocés">
-            <h3>Fish and Chips</h3>
-            </div>
-
-            <div class="categoria"
-                data-img="img/plato3.png"
-                data-titulo="Cullen Skink"
-                data-descripcion="La Cullen Skink es la sopa más tradicional de Escocia y
-                 un plato muy apreciado en Edimburgo. Se elabora con pescado ahumado —generalmente eglefino—,
-                  patatas y cebolla, cocidos en leche o nata para darle una textura cremosa y un sabor 
-                  intenso y reconfortante. Su origen está en la localidad costera de Cullen, pero hoy 
-                  se sirve en pubs y restaurantes de la capital como una muestra auténtica de la cocina
-                   escocesa. Es espesa, nutritiva y perfecta para los fríos días de invierno, convirtiéndose 
-                   en una experiencia gastronómica imprescindible para quienes desean probar la verdadera esencia culinaria de Escocia.">
-            <img src="img/plato3.png" alt="Desayuno Escocés">
-            <h3>Cullen Skink</h3>
-            </div>
-
-            <div class="categoria"
-                data-img="img/plato4.png"
-                data-titulo="Cullen Skink"
-                data-descripcion="La Cullen Skink es la sopa más tradicional de Escocia y
-                 un plato muy apreciado en Edimburgo. Se elabora con pescado ahumado —generalmente eglefino—,
-                  patatas y cebolla, cocidos en leche o nata para darle una textura cremosa y un sabor 
-                  intenso y reconfortante. Su origen está en la localidad costera de Cullen, pero hoy 
-                  se sirve en pubs y restaurantes de la capital como una muestra auténtica de la cocina
-                   escocesa. Es espesa, nutritiva y perfecta para los fríos días de invierno, convirtiéndose 
-                   en una experiencia gastronómica imprescindible para quienes desean probar la verdadera esencia culinaria de Escocia.">
-            <img src="img/plato4.png" alt="Desayuno Escocés">
-            <h3>Cullen Skink</h3>
-            </div>
-
-
-
-
-
-
-
-
-           
-        </div>
-        </section>
-
+        
 
 
 
