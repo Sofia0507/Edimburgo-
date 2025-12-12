@@ -132,6 +132,9 @@ document.querySelectorAll('.categoria').forEach(plato => {
 });
 
 
+// botones trasportes
+
+
 
 // Chartjs
 
