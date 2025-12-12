@@ -69,21 +69,22 @@ elementosAnimados.forEach(el => animObserver.observe(el));
 
 // FILTRO ALOJAMIENTO
 // ========================
-const botonesFiltro = document.querySelectorAll(".filtro");
-const tarjetasAlojamiento = document.querySelectorAll(".card-alojamiento");
-
 botonesFiltro.forEach(boton => {
-    boton.addEventListener("click", () => {
-        botonesFiltro.forEach(b => b.classList.remove("activo"));
-        boton.classList.add("activo");
+  boton.addEventListener("click", () => {
+    botonesFiltro.forEach(b => b.classList.remove("activo"));
+    boton.classList.add("activo");
 
-        const categoria = boton.dataset.categoria;
+    const categoria = boton.dataset.categoria;
 
-        tarjetasAlojamiento.forEach(card => {
-            const cardCategoria = card.dataset.categoria;
-            card.style.display = (categoria === "todos" || categoria === cardCategoria) ? "block" : "none";
-        });
+    tarjetasAlojamiento.forEach(card => {
+      const cardCategoria = card.dataset.categoria;
+      if (categoria === "todos" || categoria === cardCategoria) {
+        card.style.display = "flex"; // o "initial" según tu CSS
+      } else {
+        card.style.display = "none";
+      }
     });
+  });
 });
 
 

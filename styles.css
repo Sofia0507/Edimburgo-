@@ -65,10 +65,7 @@ body {
   z-index: 1;
 }
 
-.logo-img {
-  width: 50px;   
-  height: auto;
-}
+
 
 
 .hero-bg {
@@ -123,87 +120,126 @@ body {
 }
 
 /* menú */
-#main-menu {
-   position: fixed;
+#menu {
+  position: sticky;
   top: 0;
-  z-index: 100;
-  width: 100%;
-  background: rgba(0,0,0,0.3); /* fondo transparente */
-}
-.menu-container {
+  background-color: #111;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 20px 40px;
+  z-index: 1000;
+  flex-wrap: wrap;
 }
-.menu {
+
+#menu p{
+  font-family:'Montserrat', sans-serif;;
+}
+
+#menu ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 40px;
   margin: 0;
   padding: 0;
 }
-.menu li a {
+
+#menu ul li a {
+  color: white;
   text-decoration: none;
-  color: #ffffff;
+  font-size: 0.8rem;
   font-weight: bold;
+  position: relative;
   transition: color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
 }
 
-.menu li a:hover {
-  color: #F2C94C;
+#menu ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #efc84a;
+  transition: width 0.3s ease;
 }
 
+#menu ul li a:hover {
+  color: #A5F557;
+}
+
+#menu ul li a:hover::after {
+  width: 100%;
+
+}
+
+/* menu hamburguesa */
 .menu-toggle {
   display: none;
-  font-size: 2rem;
   background: none;
   border: none;
-  color: white;
   cursor: pointer;
+  padding: 0;
+}
+#menu .logo img {
+  height: 50px;
+  filter: drop-shadow(0 0 5px #A5F557);
+}
+.menu-icon {
+  width: 40px;
+  height: auto;
+  filter: drop-shadow(0 0 5px #A5F557);
+  transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .menu {
-    display: none; /* inicialmente oculto */
+.menu-toggle:hover .menu-icon {
+  transform: scale(1.1);
+}
+
+/* ocultarlo en movil */
+.menu-toggle {
+  display: none;
+}
+
+#menu ul.active {
+  display: flex;
+}
+
+
+/* responsive menu */
+
+/* menu hamburguesa */
+
+@media screen and (max-width: 768px) {
+  /* Ocultar menú de texto */
+  #menu ul {
+    display: none;
     flex-direction: column;
-    position: fixed;      /* fijo en la pantalla */
-    top: 0;               /* desde arriba */
-    left: 0;
     width: 100%;
-    height: 100vh;        /* ocupa toda la pantalla */
-    background: rgba(0,0,0,0.95); /* fondo casi opaco */
-    padding-top: 5rem;    /* espacio para el logo y botón */
-    text-align: center;
-    z-index: 9999;        /* encima de todo */
-    overflow-y: auto;     /* scroll si hay mucho contenido */
+    background-color: #111;
+    padding: 20px 0;
   }
 
-  .menu li {
-    margin: 2rem 0;
-  }
-
-  .menu.show {
+  #menu ul.active {
     display: flex;
-    animation: slideDown 0.3s ease forwards;
   }
 
+  #menu ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  #menu ul li a {
+    font-size: 1rem;
+  }
+
+  /* Mostrar hamburguesa */
   .menu-toggle {
     display: block;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    z-index: 10000;
   }
 }
-
-@keyframes slideDown {
-  0% { transform: translateY(-100%); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
 
 
 
@@ -223,7 +259,7 @@ body {
   margin-bottom: 90px;
   font-size:3rem;
   color: rgb(255, 255, 255);
-  font-family: pecita, cursive;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
@@ -383,13 +419,13 @@ body {
 
 /* PAGINA2 */
 
-.carrousel h2 {
+/* .carrousel h2 {
   font-family: pecita, cursive;
   font-weight: 700;
   font-size: 3rem;
   margin-bottom: 3rem;
   color: #f1f5f9; /* blanco suave */
-  letter-spacing: 1px;
+  /* letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -442,7 +478,7 @@ body {
   object-fit: cover;
   transition: 0.4s ease;
   filter: brightness(0.9); /* efecto más cinematográfico */
-}
+/* } */
 
 .card.active {
   transform: translateX(0) rotateY(0) scale(1.1);
@@ -532,8 +568,8 @@ body {
   opacity: 1;
   pointer-events: auto;
   position: relative;
-}
-
+} */
+ */
 
 .destinos {
   position: relative;
@@ -830,8 +866,8 @@ body {
 }
 
 .transporte img {
-  width: 100%;       /* ocupa todo el ancho disponible */
-  height: auto;      /* mantiene proporción */
+  width: 100%;       
+  height: auto;      
   border-radius: 10px;
 }
 
@@ -850,7 +886,7 @@ body {
  
   margin: 0 auto 5rem;
   text-align: center;
-  font-family: pecita, cursive;
+  font-family: 'Montserrat', sans-serif;
   color: #F2C94C;
   font-size: 5rem;
 
@@ -1004,7 +1040,9 @@ body {
 /* CHART.JS */
 #linea {
   width: 100%;
+  
 }
+
 /* CURIOSIDADES */
 .curiosidad-detalle {
   margin-top: 2rem;
@@ -1044,7 +1082,7 @@ body {
   font-size: 4rem;
   margin-bottom: 2rem;
   font-weight: 700;
-  font-family:"Source Sans Pro", sans-serif;
+  font-family:'Montserrat', sans-serif;
   color: #F2C94C;
 }
 
@@ -1229,11 +1267,11 @@ body {
 
 
 .planes > div:first-child h2 {
-    text-align: center;
+    text-align: justify;
     margin: 0 auto;
     font-size: 4rem;
     color: #F2C94C;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -1365,7 +1403,7 @@ body {
   background: linear-gradient(to bottom, #f3f4f6, #e2e8f0);
   padding: 4rem 2rem;
   text-align: center;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: justify;
 
 }
@@ -1457,7 +1495,7 @@ body {
 }
 
 .curiosidades-header h2 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 3.5rem;
   color: #F2C94C;
   margin-bottom: 1rem;

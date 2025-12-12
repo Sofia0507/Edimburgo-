@@ -16,21 +16,23 @@
    
    <body>
    
-        <nav id="main-menu">
-            <div class="menu-container">
+            <nav id="menu" aria-label="Menú principal">
+          <!-- logo menú -->
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo ">
+          <button class="menu-toggle" id="menuToggle">
+            <img src="img/hamburguesa.webp" alt="Menu" class="menu-icon">
+          </button>
 
-                <a href="#" class="logo">MiWeb</a>
-                <button class="menu-toggle" aria-label="Abrir menú">
-                &#9776; <!-- icono hamburguesa -->
-               </button>
-                <ul class="menu">
-                    <li><a href="index.html">Información general</a></li>
-                    <li><a href="descubre.html">Descubre</a></li>
-                    <li><a href="descubre.html">Contacto</a></li>
-
-                </ul>
-            </div>   
-       </nav>
+          <ul id="menu-links">
+            <li>
+              <a href="index.html">Información general</a>
+            </li>
+            <li>
+              <a href="descubre.html">Descubre</a>
+            </li>
+          </ul>
+        </nav>
 
        <!-- Overlay para menú móvil -->
        <div id="menu-overlay"></div>
@@ -82,7 +84,7 @@
             </div>
 
              <!-- Dean Village -->
-            <div class="card-alojamiento" data-categoria="histórico">
+            <div class="card-alojamiento" data-categoria="historico">
                 <img src="img/deanvillage.jpg" alt="Dean Village">
                 <div class="info">
                     <h3>Dean Village</h3>
